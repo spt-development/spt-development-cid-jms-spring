@@ -7,6 +7,8 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.jms.support.JmsHeaders;
 import org.springframework.messaging.handler.annotation.Header;
 
@@ -20,6 +22,7 @@ import java.util.Arrays;
  * Spring {@link org.springframework.jms.annotation.JmsListener}.
  */
 @Aspect
+@Order(0)
 public class CorrelationIdSetter {
     private static final Logger LOG = LoggerFactory.getLogger(CorrelationIdSetter.class);
 
