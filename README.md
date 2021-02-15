@@ -16,7 +16,7 @@ into a Spring JMS (listener) project.
 Usage
 =====
 
-Register the Aspect as a Spring Bean manuall or by adding the  
+Register the Aspect as a Spring Bean manually or by adding the  
 [spt-development/spt-development-cid-jms-spring-boot](https://github.com/spt-development/spt-development-cid-jms-spring-boot)
 starter to your project's pom.
 
