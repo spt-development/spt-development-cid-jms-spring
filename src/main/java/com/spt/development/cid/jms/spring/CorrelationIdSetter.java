@@ -42,7 +42,7 @@ public class CorrelationIdSetter {
      *
      * @throws NoSuchMethodException an unexpected exception thrown when retrieving the listener method details.
      * @throws JMSException when a {@link Message} parameter is found, but there is a problem call
-     * {@link Message#getJMSCorrelationID()}.
+     *     {@link Message#getJMSCorrelationID()}.
      */
     @Before("@annotation(org.springframework.jms.annotation.JmsListener)")
     public void setCorrelationId(final JoinPoint point) throws NoSuchMethodException, JMSException {

@@ -1,7 +1,7 @@
 language: java
 
 jdk:
-  - openjdk15
+  - openjdk8
 
 script:
   - mvn test -B
@@ -15,7 +15,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: MGCYO0bKGWSOf5cBk5R4B57qW3n5354NMA+g1hfP5ZZEJrpEtQnREn/PeEywwpIzFuQcQN4Yo0flNn0kh1u3zqdTxznZKEKW253dTC3KioCyxnXrSRRqYusWPzkJMK9mXdTdvBa7UqCKg1/6cQPz/2/ri/SXIgqgdec/d35/4E2CnuXpTTB+yOdPHjBpeNLWRxOyecN2QuR0TIXSKxX0z7Jg/+7XJs1ZbBF+VxzepKC37LtrGt4UhYPfDsVVBswQqKDCw8pD+tUGJZdTYaGtA4FNveWhghNE5xk/GsMmHGK2+CsZuz+LZQYazDmrHPvj3U+Ep570DqqjknBpF0SRBwPVLM/OMh0Hi65rZADEL/aUf68XhGwu/33yOIudjDsgfpCcn8RNJQMDnOFdqf303kobCMXQWBbpPVdpCxQYaC4R6Q5HXAAbIXBJkhCu9Hjp53Wehw5zU2lY66hWMcHUycoRg2ZJUw7uZboB81iSYxyhuS7cG5H8TRFHif/qm8UNeTz6r4oLITPrmPRM39NoTE3gSbbQtq18llY84mqtTuMc9U3GP5vh0aVJ/sRAZ89VbzSUrQS9/SNfs9MLcIWp59cUWXg47ow2OKVdcsuOb4u38HivC6NBIL2FwCfP5+MLPPMiuCc7CAnmoZG2KOJ4h9syGaIpHABIBxl/nN+W5cg=
+    secure: Xj9VQ5ZGMnfoz6mKVGf3wGlPYWO2K3YUlJTvwNyxqsesbRDydHhmb0LZvdGEV/177KLiCszPzr0uYG6jEBGu9U1uimuMG4/a0qbcaggq9RzCYwEFlHD2/Q7J9THAa1PtqynhPMtDyzW8KQg5uqt6nv3a1lYiYwEEtpUEJNrAo0Thh5brMKvwfAsaI0Et+TaIigXCDUnhj/XO7jvlhltw+b68vb+gJAAf066K0NOkjy2Y4Xx4S33aYfqiHTQ9ZOHjkZoKL4xfqbURV0x9/BL9Pwm5zUVXY8Zi95iZ6OMssCmtlwFBSWvmmJ0ICXcQx4yUQXebM3RE1e6U/7RTACN8WWQg6LZE/SplvNuUpo2kUKpbAn90bssg8cNA8XwJnTJdDWNGwjhEJLv3Xvpqz+ykLF+P5EVMRrP3nYCpaL+4Q6HJypaKq60JjLo/Qtl9nsrS/SQmE4xLKZcByKVDzPlXzjH0qE1LtJJJ5JwtDIynxk5XjR2EyYwwplrhE+WgvKjMeZYOCOPfr5wl6HybdkzRc5GKuEkJIZFQL1WTWAUXDYoARgz+J6JyAVmtgdlTrvHLfqiJR+mAwt8+h+qUBTwkZaJpiVwgrJcdV3QiljnGaQritUWPy5wdeEhOPEKgqcDKGx2Cf9+Zv5iT5FB7pc9RWKd+9fptNaHDYSr874nha+I=
   file: "target/spt-development-cid-jms-spring-${POM_VERSION}.jar"
   skip_cleanup: true
   on:
