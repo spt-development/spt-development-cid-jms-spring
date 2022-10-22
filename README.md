@@ -16,7 +16,7 @@ into a Spring JMS (listener) project.
 Usage
 =====
 
-Register the Aspect as a Spring Bean manually or by adding the  
+Register the aspects as a Spring Beans manually or by adding the  
 [spt-development/spt-development-cid-jms-spring-boot](https://github.com/spt-development/spt-development-cid-jms-spring-boot)
 starter to your project's pom.
 
@@ -24,6 +24,12 @@ starter to your project's pom.
     @Order(0)
     public CorrelationIdSetter correlationIdSetter() {
         return new CorrelationIdSetter();
+    }
+
+    @Bean
+    @Order(1)
+    public MdcCorrelationIdPutter mdcCorrelationIdPutter() {
+        return new MdcCorrelationIdPutter();
     }
 
 Building locally
