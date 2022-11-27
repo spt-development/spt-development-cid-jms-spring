@@ -1,6 +1,8 @@
 package com.spt.development.cid.jms.spring;
 
 import com.spt.development.cid.CorrelationId;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -11,8 +13,6 @@ import org.springframework.core.annotation.Order;
 import org.springframework.jms.support.JmsHeaders;
 import org.springframework.messaging.handler.annotation.Header;
 
-import javax.jms.JMSException;
-import javax.jms.Message;
 import java.lang.annotation.Annotation;
 import java.util.Arrays;
 
