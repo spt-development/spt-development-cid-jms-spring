@@ -3,7 +3,7 @@
 
     <groupId>com.spt-development</groupId>
     <artifactId>spt-development-cid-jms-spring</artifactId>
-    <version>2.0.9-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
 
     <name>cid-jms-spring</name>
     <description>Library for integrating spt-development/spt-development-cid into a Spring JMS (listener) project.</description>
@@ -29,22 +29,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <maven.compiler.release>8</maven.compiler.release>
+        <maven.compiler.release>17</maven.compiler.release>
 
         <!-- Dependency versions -->
         <spt-cid.version>2.0.11</spt-cid.version>
 
         <!-- Dependency versions, matched to Spring Boot -->
-        <aspectj.version>1.9.7</aspectj.version>
-        <jakarta-jms.version>2.0.3</jakarta-jms.version>
-        <slf4j.version>1.7.36</slf4j.version>
-        <spring.version>5.3.23</spring.version>
+        <aspectj.version>1.9.9.1</aspectj.version>
+        <jakarta-jms.version>3.1.0</jakarta-jms.version>
+        <slf4j.version>2.0.4</slf4j.version>
+        <spring.version>6.0.2</spring.version>
 
         <!-- Test dependency versions, matched to Spring Boot -->
         <hamcrest.version>2.2</hamcrest.version>
-        <logback.version>1.2.11</logback.version>
-        <junit-jupiter.version>5.8.2</junit-jupiter.version>
-        <mockito.version>4.5.1</mockito.version>
+        <logback.version>1.4.5</logback.version>
+        <junit-jupiter.version>5.9.1</junit-jupiter.version>
+        <mockito.version>4.8.1</mockito.version>
 
         <!-- Plugin versions -->
         <checkstyle-maven-plugin.version>3.1.2</checkstyle-maven-plugin.version>

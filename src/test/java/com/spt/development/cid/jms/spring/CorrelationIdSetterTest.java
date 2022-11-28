@@ -1,6 +1,7 @@
 package com.spt.development.cid.jms.spring;
 
 import com.spt.development.cid.CorrelationId;
+import jakarta.jms.Message;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,8 +10,6 @@ import org.mockito.Mockito;
 import org.springframework.jms.support.JmsHeaders;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
-
-import javax.jms.Message;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
