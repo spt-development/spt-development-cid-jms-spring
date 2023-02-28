@@ -38,7 +38,7 @@
         <aspectj.version>1.9.19</aspectj.version>
         <jakarta-jms.version>3.1.0</jakarta-jms.version>
         <slf4j.version>2.0.6</slf4j.version>
-        <spring.version>6.0.4</spring.version>
+        <spring.version>6.0.5</spring.version>
 
         <!-- Test dependency versions, matched to Spring Boot -->
         <hamcrest.version>2.2</hamcrest.version>
