@@ -20,24 +20,28 @@ Register the aspects as a Spring Beans manually or by adding the
 [spt-development/spt-development-cid-jms-spring-boot](https://github.com/spt-development/spt-development-cid-jms-spring-boot)
 starter to your project's pom.
 
-    @Bean
-    @Order(0)
-    public CorrelationIdSetter correlationIdSetter() {
-        return new CorrelationIdSetter();
-    }
+```java
+@Bean
+@Order(0)
+public CorrelationIdSetter correlationIdSetter() {
+    return new CorrelationIdSetter();
+}
 
-    @Bean
-    @Order(1)
-    public MdcCorrelationIdPutter mdcCorrelationIdPutter() {
-        return new MdcCorrelationIdPutter();
-    }
+@Bean
+@Order(1)
+public MdcCorrelationIdPutter mdcCorrelationIdPutter() {
+    return new MdcCorrelationIdPutter();
+}
+```
 
 Building locally
 ================
 
 To build the library, run the following maven command:
 
-    $ mvn clean install
+```shell
+$ mvn clean install
+```
 
 Release
 =======
