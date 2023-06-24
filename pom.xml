@@ -3,7 +3,7 @@
 
     <groupId>com.spt-development</groupId>
     <artifactId>spt-development-cid-jms-spring</artifactId>
-    <version>3.0.7-SNAPSHOT</version>
+    <version>3.0.7</version>
 
     <name>cid-jms-spring</name>
     <description>Library for integrating spt-development/spt-development-cid into a Spring JMS (listener) project.</description>
@@ -12,7 +12,7 @@
     <scm>
         <connection>scm:git:https://github.com/spt-development/spt-development-cid-jms-spring.git</connection>
         <url>https://github.com/spt-development/spt-development-cid-jms-spring</url>
-      <tag>HEAD</tag>
+      <tag>3.0.7</tag>
   </scm>
 
     <licenses>
