@@ -19,10 +19,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.Mockito.when;
 
 class MdcCorrelationIdPutterTest {
-    private interface TestData {
-        String CORRELATION_ID = "4b5af7d0-6763-44b2-95b5-aff48ca61385";
+    private static class TestData {
+        static final String CORRELATION_ID = "4b5af7d0-6763-44b2-95b5-aff48ca61385";
 
-        String ALT_MDC_CID_KEY = "test-correlation-id";
+        static final String ALT_MDC_CID_KEY = "test-correlation-id";
     }
 
     @BeforeEach
@@ -35,7 +35,7 @@ class MdcCorrelationIdPutterTest {
         final ProceedingJoinPoint joinPoint = Mockito.mock(ProceedingJoinPoint.class);
         final MethodSignature methodSignature = Mockito.mock(MethodSignature.class);
 
-        final Object[] args = new Object[] { TestData.CORRELATION_ID, "{}" };
+        final Object[] args = { TestData.CORRELATION_ID, "{}" };
         final TestTarget target = new TestTarget(MDC_CID_KEY);
 
         when(joinPoint.getSignature()).thenReturn(methodSignature);
@@ -55,7 +55,7 @@ class MdcCorrelationIdPutterTest {
         final ProceedingJoinPoint joinPoint = Mockito.mock(ProceedingJoinPoint.class);
         final MethodSignature methodSignature = Mockito.mock(MethodSignature.class);
 
-        final Object[] args = new Object[] { TestData.CORRELATION_ID, "{}" };
+        final Object[] args = { TestData.CORRELATION_ID, "{}" };
         final TestTarget target = new TestTarget(TestData.ALT_MDC_CID_KEY);
 
         when(joinPoint.getSignature()).thenReturn(methodSignature);
