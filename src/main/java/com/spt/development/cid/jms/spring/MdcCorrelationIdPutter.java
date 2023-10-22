@@ -49,7 +49,7 @@ public class MdcCorrelationIdPutter {
      */
     @Around("@annotation(org.springframework.jms.annotation.JmsListener)")
     public Object putCorrelationId(final ProceedingJoinPoint point) throws Throwable {
-        try (final MDC.MDCCloseable mdc = MDC.putCloseable(cidKey, CorrelationId.get())) {
+        try (MDC.MDCCloseable mdc = MDC.putCloseable(cidKey, CorrelationId.get())) {
             assert mdc != null;
 
             return point.proceed();

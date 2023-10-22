@@ -74,8 +74,10 @@ public class CorrelationIdSetter {
         }
         CorrelationId.reset();
 
-        LOG.warn("[{}] Unable to set correlation ID. Method annotated with JmsListener annotation must have a parameter " +
-                "annotated with the Header annotation with its value set to JmsHeaders.CORRELATION_ID *or* a parameter of " +
-                "type Message", CorrelationId.get());
+        LOG.warn(
+            "[{}] Unable to set correlation ID. Method annotated with JmsListener annotation must have a parameter annotated with the Header "
+                + "annotation with its value set to JmsHeaders.CORRELATION_ID *or* a parameter of type Message",
+            CorrelationId.get()
+        );
     }
 }

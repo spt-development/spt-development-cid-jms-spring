@@ -16,8 +16,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.Mockito.when;
 
 class CorrelationIdSetterTest {
-    private interface TestData {
-        String CORRELATION_ID = "2e28c03d-ee46-43b4-a364-94bfa9eb7e87";
+    private static class TestData {
+        static final String CORRELATION_ID = "2e28c03d-ee46-43b4-a364-94bfa9eb7e87";
     }
 
     @BeforeEach
