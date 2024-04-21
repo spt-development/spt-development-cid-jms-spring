@@ -16,7 +16,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.Mockito.when;
 
 class CorrelationIdSetterTest {
-    private static class TestData {
+    private static final class TestData {
         static final String CORRELATION_ID = "2e28c03d-ee46-43b4-a364-94bfa9eb7e87";
     }
 
@@ -77,7 +77,7 @@ class CorrelationIdSetterTest {
         return new CorrelationIdSetter();
     }
 
-    private static class TestTarget {
+    private static final class TestTarget {
         public void test(@Header("ignore") String ignored,
                          @Header(JmsHeaders.CORRELATION_ID) String correlationId,
                          @Payload String payload) {
