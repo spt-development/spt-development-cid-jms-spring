@@ -19,7 +19,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.Mockito.when;
 
 class MdcCorrelationIdPutterTest {
-    private static class TestData {
+    private static final class TestData {
         static final String CORRELATION_ID = "4b5af7d0-6763-44b2-95b5-aff48ca61385";
 
         static final String ALT_MDC_CID_KEY = "test-correlation-id";
@@ -80,7 +80,7 @@ class MdcCorrelationIdPutterTest {
         return new MdcCorrelationIdPutter(TestData.ALT_MDC_CID_KEY);
     }
 
-    private static class TestTarget {
+    private static final class TestTarget {
         final String expectedCidKey;
 
         TestTarget(String expectedCidKey) {
